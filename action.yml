@@ -1,0 +1,15 @@
+name: 'Commitlint PR title'
+description: 'This action runs your commitlint config against your Pull Request titles'
+author: 'Felix Hamann <felix.hamann@satellytes.com>'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
+inputs:
+  commitlintConfigFile:
+    description: path to commitlint config file
+    required: false
+    default: ./commitlint.config.js
+  helpUrl:
+    description: help url for users of this action
+    required: false
+    default: 'https://www.conventionalcommits.org'
